@@ -1,6 +1,6 @@
-DROP TABLE IF EXISTS employee;
+/*DROP TABLE IF EXISTS employee;
 DROP TABLE IF EXISTS users;
-DROP TABLE IF EXISTS authorities;
+DROP TABLE IF EXISTS authorities;*/
 
 
 CREATE TABLE employee (
