@@ -48,11 +48,13 @@ import org.springframework.ui.Model;
 public class Main 
 {
 
+  /*
   @Value("${spring.datasource.url}")
   private String dbUrl;
 
   @Autowired
   private DataSource dataSource;
+  */
 
   public static void main(String[] args) throws Exception 
   {
@@ -96,7 +98,7 @@ public class Main
   {
     return "result";
   }
-
+/*
   @RequestMapping("/db")
   String db(Map<String, Object> model) 
   {
@@ -137,5 +139,5 @@ public class Main
       return new HikariDataSource(config);
     }
   }
-
+*/
 }

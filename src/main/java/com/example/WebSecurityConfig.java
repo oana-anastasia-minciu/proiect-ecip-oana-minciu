@@ -81,7 +81,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	*/
 	
 	@Autowired
-	DataSource dataSource;
+	private DataSource dataSource;
 
 	//Enable jdbc authentication
 	@Autowired
