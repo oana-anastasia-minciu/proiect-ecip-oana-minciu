@@ -1,24 +1,29 @@
 
 package com.example;
 
-public class Greeting {
+public class Greeting 
+{
 
   private long id;
   private String content;
 
-  public long getId() {
+  public long getId() 
+  {
     return id;
   }
 
-  public void setId(long id) {
+  public void setId(long id) 
+  {
     this.id = id;
   }
 
-  public String getContent() {
+  public String getContent() 
+  {
     return content;
   }
 
-  public void setContent(String content) {
+  public void setContent(String content) 
+  {
     this.content = content;
   }
 
