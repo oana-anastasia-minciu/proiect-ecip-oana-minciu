@@ -65,6 +65,12 @@ public class Main
     return "index";
   }
 
+  @RequestMapping("/login")      // map the home of the website
+  String login() 
+  {
+    return "login";
+  }
+
   @RequestMapping("/hello")   // map the hello page of the website
   String hello(Map<String, Object> model) 
   {
