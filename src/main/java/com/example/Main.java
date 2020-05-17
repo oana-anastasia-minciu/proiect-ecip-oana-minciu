@@ -30,6 +30,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
@@ -82,6 +84,13 @@ public class Main
     model.addAttribute("greeting", new Greeting());
     return "greeting";
   }
+
+  @PostMapping("/greeting")
+  public String greetingSubmit(@ModelAttribute Greeting greeting) 
+  {
+    return "result";
+  }
+
   @RequestMapping("/db")
   String db(Map<String, Object> model) 
   {
