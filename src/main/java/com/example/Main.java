@@ -162,13 +162,6 @@ public class Main
     return ratingRepository.findAll();
   }
 
-  /*
-  @GetMapping(path="/ratings")
-  public @ResponseBody Iterable<Rating> getAllRatings() {
-    // This returns a JSON or XML with the users
-    return ratingRepository.findAll();
-  }*/
-
 
 /*
   @RequestMapping("/db")
