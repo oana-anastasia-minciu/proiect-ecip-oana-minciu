@@ -1,9 +1,10 @@
 .style-test{  display: flex;
     justify-content: flex-end;
-    background-color: rgba(127, 80, 212, 0.58);
+    background-color: #343a40!important;
     padding: 1%;
     align-items: center;
     border-radius: 5px;
+
 }
 
 .user-name-style{
@@ -69,12 +70,7 @@ label
 .bg-dark {
     background-color: #343a40!important;
 }
-.hidden-dark-font
-{
-    background-color: #343a40!important;
-    color:  #343a40!important;
 
-}
 .navbar-brand {
     display: inline-block;
     padding-top: .3125rem;
@@ -113,9 +109,6 @@ label
     justify-content: space-between;
     padding: .5rem 1rem;
     border-radius: 5px;
-}
-.builder .top-btns .button.btn-hire-inner {
-    background: #E91E63;
 }
 
 .ml-lg-auto, .mx-lg-auto {
