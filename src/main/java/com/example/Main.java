@@ -145,6 +145,12 @@ public class Main
     return "thankyou";
   }
 
+  @GetMapping(path="/ratings")
+  public  Iterable<Rating> getAllRatings() 
+  {
+    // This returns a JSON or XML with the users
+    return ratingRepository.findAll();
+  }
   /*
   @GetMapping(path="/ratings")
   public @ResponseBody Iterable<Rating> getAllRatings() {
