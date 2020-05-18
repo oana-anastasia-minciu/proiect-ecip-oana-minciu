@@ -9,3 +9,13 @@
     font-size:1.2rem;
     font-weight: bold;
 }
+
+.logout-button {
+    background-color: #9954b4;
+    color: white;
+    padding: 14px 0;
+    margin: 10px 0;
+    border: none;
+    cursor: grabbing;
+    width: 100%;
+}
