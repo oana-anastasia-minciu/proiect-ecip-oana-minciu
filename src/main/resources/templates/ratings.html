@@ -10,7 +10,10 @@
     <div> BLAAAAAAAAAA</div>
     <div id="myData"></div>
     <script>
-        fetch('https://blooming-earth-43684.herokuapp.com/all')
+        fetch('https://blooming-earth-43684.herokuapp.com/all',{
+            method: "GET",
+            body: json.stringify(data)
+        })
             .then(function (data) {
                 appendData(data);
                 console.log(data);
