@@ -69,7 +69,7 @@ label
 .bg-dark {
     background-color: #343a40!important;
 }
-.hidden-font
+.hidden-dark-font
 {
     background-color: #343a40!important;
     color:  #343a40!important;
@@ -118,13 +118,16 @@ label
     background: #E91E63;
 }
 
+.ml-lg-auto, .mx-lg-auto {
+    margin-left: auto!important;
+}
 .builder .top-btns .button {
     background: #5d0d8f;
     border: 0;
     border-radius: 5px;
     color: white;
     font-family: 'Alegreya Sans', sans-serif;
-    font-size: 12px;
+    font-size: 16px;
     line-height: 1.25;
     margin-left: 5px;
     padding: 5px 10px 4px;
@@ -137,7 +140,7 @@ label
     color: #fff;
     cursor: pointer;
     display: inline-block;
-    font-size: 12px;
+    font-size: 18px;
 }
 /*
 .table-style {
