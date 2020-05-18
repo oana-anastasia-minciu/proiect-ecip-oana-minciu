@@ -156,13 +156,13 @@ public class Main
     return "ratings";
   }
 
-  @GetMapping("/all")
-  public @ResponseBody List<Rating> getAllUsers()
+  @GetMapping("/test")
+  public String messages(Model model) 
   {
-    // This returns a JSON or XML with the users
-    System.out.println(((List<Rating>)ratingRepository.findAll()).size());
-    return (List<Rating>)ratingRepository.findAll();
+      model.addAttribute("messages", ratingRepository.findAll());
+      return "test";
   }
+
 
 
 /*
