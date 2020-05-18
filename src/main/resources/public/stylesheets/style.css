@@ -1,5 +1,11 @@
-.style-test{
-
+.style-test{   
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
+    background-color: #9575CD;
+    padding: 1%;
+}
+
+.user-name-style{
+    font-size:1.2rem;
+    font-weight: bold;
 }
