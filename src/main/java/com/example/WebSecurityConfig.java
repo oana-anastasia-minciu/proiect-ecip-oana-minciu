@@ -12,7 +12,7 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import javax.sql.DataSource;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-
+import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 
 
@@ -31,7 +31,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter
 		.usersByUsernameQuery("select username, password, enabled"
 			+ " from users where username=?")
 		.authoritiesByUsernameQuery("select username, authority "
-			+ "from authorities where username=?");
+			+ "from authorities where username=?")
+		.passwordEncoder(NoOpPasswordEncoder.getInstance();
 	}
 
 	@Override
