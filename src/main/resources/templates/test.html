@@ -11,9 +11,11 @@
 <body>
     <div class="style-test"> 
     <span class="user-name-style">[[${#httpServletRequest.remoteUser}]]</span>    
-    <button class="logout-button">Logout</button>
+    <button class="logout-button" th:action="@{/logout}" >Logout</button>
     </div>
-
+    <div>
+        <p>These are the ratings until now:</p>
+    </div>
     <div class="MuiPaper-root MuiTableContainer-root MuiPaper-elevation1 MuiPaper-rounded">
     <table class="table-style">
         <tr>
