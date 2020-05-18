@@ -147,14 +147,16 @@ public class Main
   }
 
   @GetMapping("/ratings")
-  public  Iterable<Rating> getAllRatings() 
+  public String getAllRatings() 
   {
     // This returns a JSON or XML with the users
-    return ratingRepository.findAll();
+    //return ratingRepository.findAll();
+    return "ratings";
   }
 
   @GetMapping("/all")
-  public @ResponseBody Iterable<Rating> getAllUsers() {
+  public @ResponseBody Iterable<Rating> getAllUsers() 
+  {
     // This returns a JSON or XML with the users
     return ratingRepository.findAll();
   }
