@@ -56,7 +56,7 @@ public class Main
   @Autowired
   private DataSource dataSource;
   */
-
+  @Autowired
   private RatingRepository ratingRepository;
 
   public static void main(String[] args) throws Exception 
