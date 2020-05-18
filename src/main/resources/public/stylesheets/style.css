@@ -1,6 +1,6 @@
 .style-test{  display: flex;
     justify-content: flex-end;
-    background-color: #9575CD;
+    background-color: rgb(176, 152, 219);
     padding: 1%;
     align-items: center;
 }
@@ -23,10 +23,9 @@
 }
 td
 {
-  height:40px;
-  width: 100%;
-  padding: 3%;
+  padding: 2%;
   align-items: center;
+  border: 1px solid #dee2e6;
 }
 
 .table-bordered {
