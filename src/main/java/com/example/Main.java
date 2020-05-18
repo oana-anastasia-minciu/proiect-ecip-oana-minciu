@@ -145,7 +145,7 @@ public class Main
     return "thankyou";
   }
 
-  @GetMapping(path="/ratings")
+  @GetMapping("/ratings")
   public  Iterable<Rating> getAllRatings() 
   {
     // This returns a JSON or XML with the users
