@@ -30,6 +30,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -151,6 +152,13 @@ public class Main
     // This returns a JSON or XML with the users
     return ratingRepository.findAll();
   }
+
+  @GetMapping("/all")
+  public @ResponseBody Iterable<Rating> getAllUsers() {
+    // This returns a JSON or XML with the users
+    return ratingRepository.findAll();
+  }
+
   /*
   @GetMapping(path="/ratings")
   public @ResponseBody Iterable<Rating> getAllRatings() {
