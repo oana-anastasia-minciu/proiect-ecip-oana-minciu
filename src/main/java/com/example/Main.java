@@ -67,10 +67,16 @@ public class Main
     return "index";
   }
 
-  @RequestMapping("/login")      // map the home of the website
+  @GetMapping("/login")      // map the home of the website
   String login() 
   {
     return "login";
+  }
+
+  @PostMapping("/login")
+  String login_redirect()
+  {
+    return "hello";
   }
 
   @RequestMapping("/hello")   // map the hello page of the website
