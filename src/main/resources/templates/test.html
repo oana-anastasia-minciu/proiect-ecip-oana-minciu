@@ -6,9 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>JSON Test</title>
+    <link href="style.css"/>
 </head>
 <body>
-
+    <div class="style-test"> 
+    <button>BLAA</button>    
+    <button>evbrjnbvoen;vbrjwnbjrnbvjsnrf</button>
+    
+    </div>
     <table>
         <tr th:each="message : ${messages}">
             <td >Name</td>
@@ -28,5 +33,6 @@
     <div sec:authorize="hasRole('ADMIN')">
     <button th:onclick="|window.location.href='/thankyou'|" type="button" >NOOOO</button>
     </div>
+
 </body>
 </html>
