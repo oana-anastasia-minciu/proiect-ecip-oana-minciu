@@ -79,6 +79,12 @@ public class Main
     return "login";
   }
 
+  @GetMapping("/thankyou")      // map the home of the website
+  String thankYou() 
+  {
+    return "thankyou";
+  }
+
   @PostMapping("/login")
   String login_redirect()
   {
