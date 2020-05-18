@@ -1,8 +1,14 @@
+
+
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Course Evaluation Survey</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
     <style>
       html, body {
       min-height: 100%;
@@ -109,8 +115,20 @@
       }
       }
     </style>
-  </head>
-  <body>
+</head>
+
+<body>
+
+    <div class="style-test">
+        <a class="brand" href="/"> ECIP - Minciu Oana-Anastasia </a>
+
+        <span class="user-name-style">[[${#httpServletRequest.remoteUser}]]</span>
+
+        <form th:action="@{/logout}" method="post">
+            <input type="submit" value="Log Out"  class="button"/>
+        </form>
+    </div>
+
     <div class="main-block">
         <form action="#" th:action="@{/coursefeedback}" th:object="${feedback}" method="post">
         <h1>Course Evaluation Survey</h1>
@@ -215,5 +233,5 @@
         </div>
       </form>
     </div>
-  </body>
+</body>
 </html>

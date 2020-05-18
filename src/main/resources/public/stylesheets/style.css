@@ -24,6 +24,8 @@
     align-self: flex-start;
     align-content: flex-start;
     justify-self: flex-start;
+    display: block;
+    padding-right: 75%;
 }
 
 .logout-button {   

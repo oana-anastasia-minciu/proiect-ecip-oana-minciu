@@ -19,12 +19,12 @@
             <input type="submit" value="Log Out"  class="button"/>
         </form>
     </div>
-    <div> 
+    <div class="logout-button"> 
         <button th:onclick="|window.location.href='/coursefeedback'|" type="button">Give Course Feedback</button>
     </div>
     
     
-    <div sec:authorize="hasRole('ADMIN')">
+    <div class="logout-button" sec:authorize="hasRole('ADMIN')">
     <button th:onclick="|window.location.href='/feedbackresults'|" type="button" >See Feedback Results</button>
     </div>
 
