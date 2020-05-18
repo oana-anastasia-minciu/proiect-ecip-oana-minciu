@@ -11,8 +11,7 @@
     <div id="myData"></div>
     <script>
         fetch('https://blooming-earth-43684.herokuapp.com/all',{
-            method: "GET",
-            body: JSON.stringify(data)
+            method: "GET"
         })
             .then(function (data) {
                 appendData(data);
