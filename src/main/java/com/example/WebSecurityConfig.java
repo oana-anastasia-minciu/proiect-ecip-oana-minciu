@@ -42,6 +42,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter
 		http
 			.authorizeRequests()
 				.antMatchers("/**").permitAll()
+				.antMatchers("/hello").hasAnyRole("USER", "ADMIN")
+				.antMatchers("/greeting").hasAnyRole("ADMIN")
 				.anyRequest().authenticated()
 				.and()
 			.formLogin()
@@ -50,8 +52,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter
 				.and()
 			.logout().permitAll();
 
-			// .antMatchers("/hello").hasAnyRole("USER", "ADMIN")
-			// 	.antMatchers("/greeting").hasAnyRole("ADMIN")
+
 			// 	
 		// 	.and()
 		// .httpBasic();
