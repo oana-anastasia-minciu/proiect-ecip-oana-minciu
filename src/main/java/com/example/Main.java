@@ -32,6 +32,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
@@ -55,6 +56,8 @@ public class Main
   @Autowired
   private DataSource dataSource;
   */
+
+  private RatingRepository ratingRepository;
 
   public static void main(String[] args) throws Exception 
   {
@@ -115,8 +118,16 @@ public class Main
   @PostMapping("/rating")
   public String ratingSubmit(@ModelAttribute Rating rating) 
   {
+    ratingRepository.save(rating);
     return "rating_result";
   }
+
+  /*
+  @GetMapping(path="/ratings")
+  public @ResponseBody Iterable<Rating> getAllRatings() {
+    // This returns a JSON or XML with the users
+    return ratingRepository.findAll();
+  }*/
 
 
 /*
