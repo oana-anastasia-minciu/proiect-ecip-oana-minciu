@@ -12,6 +12,18 @@
     font-weight: bold;
     padding: 1%;
     color: #fff;
+    display: flex;
+}
+
+.brand{
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 1%;
+    color: #fff;
+    display: flex;
+    align-self: flex-start;
+    align-content: flex-start;
+    justify-self: flex-start;
 }
 
 .logout-button {   
