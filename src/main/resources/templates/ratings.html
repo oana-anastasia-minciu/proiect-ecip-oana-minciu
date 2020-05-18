@@ -12,7 +12,7 @@
     <script>
         fetch('https://blooming-earth-43684.herokuapp.com/all',{
             method: "GET",
-            body: json.stringify(data)
+            body: JSON.stringify(data)
         })
             .then(function (data) {
                 appendData(data);
