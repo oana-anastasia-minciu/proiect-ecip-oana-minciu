@@ -112,7 +112,7 @@
   </head>
   <body>
     <div class="main-block">
-      <form action="/">
+        <form action="#" th:action="@{/coursefeedback}" th:object="${feedback}" method="post">
         <h1>Course Evaluation Survey</h1>
         <h4>COURSE</h4>
         <input type="text"/>
