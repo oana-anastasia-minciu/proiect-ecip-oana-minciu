@@ -12,6 +12,7 @@
         fetch('https://blooming-earth-43684.herokuapp.com/all')
             .then(function (data) {
                 appendData(data);
+                console.log(data);
             })
             .catch(function (err) {
                 console.log('error: ' + err);
