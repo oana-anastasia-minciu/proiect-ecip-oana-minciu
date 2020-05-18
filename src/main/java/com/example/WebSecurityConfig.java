@@ -40,18 +40,20 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter
 
 		http
 			.authorizeRequests()
-				.antMatchers("/").permitAll()
-				.antMatchers("/hello").hasAnyRole("USER", "ADMIN")
-				.antMatchers("/greeting").hasAnyRole("ADMIN")
+				.antMatchers("/**").permitAll()
 				.anyRequest().authenticated()
 				.and()
 			.formLogin()
 				.loginPage("/login")
 				.permitAll()
 				.and()
-			.logout().permitAll()
-			.and()
-		.httpBasic();
+			.logout().permitAll();
+
+			// .antMatchers("/hello").hasAnyRole("USER", "ADMIN")
+			// 	.antMatchers("/greeting").hasAnyRole("ADMIN")
+			// 	
+		// 	.and()
+		// .httpBasic();
 
 		//http.authorizeRequests().anyRequest().hasAnyRole("ADMIN", "USER")
 		//.and()
