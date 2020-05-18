@@ -18,8 +18,45 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 
 @Configuration
 @EnableWebSecurity
-public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
-	
+public class WebSecurityConfig extends WebSecurityConfigurerAdapter 
+{
+
+	@Autowired
+	private DataSource dataSource;
+
+	@Override
+	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+
+	auth.jdbcAuthentication().dataSource(dataSource)
+		.usersByUsernameQuery("select username, password, enabled"
+			+ " from users where username=?")
+		.authoritiesByUsernameQuery("select username, authority "
+			+ "from authorities where username=?"));
+	}
+
+	@Override
+	protected void configure(HttpSecurity http) throws Exception 
+	{
+
+		http
+			.authorizeRequests()
+				.antMatchers("/").permitAll()
+				.antMatchers("/hello").hasAnyRole("USER", "ADMIN")
+				.antMatchers("/greeting").hasAnyRole("ADMIN")
+				.anyRequest().authenticated()
+				.and()
+			.formLogin()
+				.loginPage("/login")
+				.permitAll()
+				.and()
+			.logout().permitAll();
+
+		//http.authorizeRequests().anyRequest().hasAnyRole("ADMIN", "USER")
+		//.and()
+		//.httpBasic(); // Authenticate users with HTTP basic authentication
+	}
+
+
 /*
 	@Autowired
 	private DataSource dataSource;
@@ -80,6 +117,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	}
 	*/
 	
+	/*
 	@Autowired
 	private DataSource dataSource;
 
@@ -88,12 +126,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	public void configAuthentication(AuthenticationManagerBuilder auth) throws Exception {
 		auth.jdbcAuthentication().dataSource(dataSource);
 	}
-	/*
+	
 	@Override
 	public void configure(WebSecurity web) throws Exception {
 		web.ignoring().antMatchers("/resources/**");
 	}
-	*/
+	
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http
@@ -111,5 +149,5 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 		http.csrf().disable();
 	}
-	
+	*/
 }
