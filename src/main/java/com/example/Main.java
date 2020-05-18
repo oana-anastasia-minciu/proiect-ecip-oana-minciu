@@ -42,6 +42,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.ui.Model;
@@ -156,10 +157,10 @@ public class Main
   }
 
   @GetMapping("/all")
-  public @ResponseBody Iterable<Rating> getAllUsers() 
+  public List<Rating> getAllUsers()
   {
     // This returns a JSON or XML with the users
-    return ratingRepository.findAll();
+    return (List<Rating>)ratingRepository.findAll();
   }
 
 
