@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Course Evaluation Survey</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <style>
+      html, body {
+      min-height: 100%;
+      }
+      body, input { 
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 14px;
+      color: #666;
+      line-height: 22px;
+      }
+      h1, h4 {
+      font-weight: 400;
+      }
+      h4 {
+      margin: 22px 0 4px;
+      }
+      h5 {
+      text-transform: uppercase;
+      color: #095484;
+      }
+      .main-block {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 3px;
+      }
+      form {
+      width: 100%;
+      padding: 20px;
+      box-shadow: 0 2px 5px #ccc; 
+      background: #fff;
+      }
+      input {
+      width: calc(100% - 10px);
+      padding: 5px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+      vertical-align: middle;
+      }
+      textarea {
+      width: calc(100% - 6px);
+      outline: none;
+      }
+      input:hover, textarea:hover {
+      outline: none;
+      border: 1px solid #095484;
+      }
+      th, td {
+      width: 15%;
+      padding: 15px 0;
+      border-bottom: 1px solid #ccc;
+      text-align: center;
+      vertical-align: unset;
+      line-height: 18px;
+      font-weight: 400;
+      word-break: break-all;
+      }
+      .additional-question th, .additional-question td {
+      width: 38%;
+      }
+      .course-rate th, .course-rate td {
+      width: 19%;
+      }
+      .first-col, .additional-question  .first-col, .course-rate .first-col {
+      width: 24%;
+      text-align: left;
+      }
+      .question, .comments {
+      margin: 15px 0 5px;
+      }
+      .question-answer label {
+      display: inline-block;
+      padding: 0 20px 15px 0;
+      }
+      .question-answer input {
+      width: auto;
+      }
+      .question-answer, table {
+      width: 100%;
+      }
+      .btn-block {
+      margin-top: 20px;
+      text-align: center;
+      }
+      button {
+      width: 150px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px; 
+      background: #095484;
+      font-size: 16px;
+      color: #fff;
+      cursor: pointer;
+      }
+      button:hover {
+      background: #0666a3;
+      }
+      @media (min-width: 568px) {
+      th, td {
+      word-break: keep-all;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-block">
+      <form action="/">
+        <h1>Course Evaluation Survey</h1>
+        <h4>COURSE</h4>
+        <input type="text"/>
+        <h4>INSTRUCTOR</h4>
+        <input type="text"/>
+        <h4> YEAR</h4>
+        <input type="text"/>
+        <h5>Teaching approaches</h5>
+        <div>
+          
+          <table>
+            <tr>
+              <th class="first-col"></th>
+              <th>Strongly Disagree</th>
+              <th>Disagree</th>
+              <th>Neutral</th>
+              <th>Agree</th>
+              <th>Strongly Agree</th>
+            </tr>
+            <tr>
+              <td class="first-col">1. The instructor stimulated my interest in the subject.</td>
+              <td><input type="radio" value="Strongly Disagree" name="interest" th:field="*{interest}" /></td>
+              <td><input type="radio" value="Disagree" name="interest" th:field="*{interest}" /></td>
+              <td><input type="radio" value="Neutral" name="interest"  th:field="*{interest}"/></td>
+              <td><input type="radio" value="Agree" name="interest" th:field="*{interest}" /></td>
+              <td><input type="radio" value="Strongly Agree" name="interest" th:field="*{interest}" /></td>
+            </tr>
+            <tr>
+              <td class="first-col">2. The instructor managed classroom time and pace well.</td>
+              <td><input type="radio"  name="managed" value="Strongly Disagree"  th:field="*{managed}" /></td>
+              <td><input type="radio"  name="managed" value="Disagree" th:field="*{managed}" /></td>
+              <td><input type="radio"  name="managed" value="Neutral" th:field="*{managed}" /></td>
+              <td><input type="radio"  name="managed" value="Agree" th:field="*{managed}" /></td>
+              <td><input type="radio"  name="managed" value="Strongly Agree" th:field="*{managed}" /></td>
+            </tr>
+            <tr>
+              <td class="first-col">3. The instructor was organized and prepared for every class</td>
+              <td><input type="radio"  name="organized" value="Strongly Disagree"  th:field="*{organized}" /></td>
+              <td><input type="radio"  name="organized" value="Disagree" th:field="*{organized}" /></td>
+              <td><input type="radio"  name="organized" value="Neutral" th:field="*{organized}" /></td>
+              <td><input type="radio"  name="organized" value="Agree" th:field="*{organized}" /></td>
+              <td><input type="radio"  name="organized" value="Strongly Agree" th:field="*{organized}" /></td>
+            </tr>
+            <tr>
+              <td class="first-col">4. The instructor encouraged discussions and responded to questions.</td>
+              <td><input type="radio"  name="encouraged" value="Strongly Disagree"  th:field="*{encouraged}" /></td>
+              <td><input type="radio"  name="encouraged" value="Disagree" th:field="*{encouraged}" /></td>
+              <td><input type="radio"  name="encouraged" value="Neutral" th:field="*{encouraged}" /></td>
+              <td><input type="radio"  name="encouraged" value="Agree" th:field="*{encouraged}" /></td>
+              <td><input type="radio"  name="encouraged" value="Strongly Agree" th:field="*{encouraged}" /></td>
+            </tr>
+
+            <tr>
+              <td class="first-col">5. The instructor appeared enthusiastic and interested.</td>
+              <td><input type="radio"  name="enthusiastic" value="Strongly Disagree"  th:field="*{enthusiastic}" /></td>
+              <td><input type="radio"  name="enthusiastic" value="Disagree" th:field="*{enthusiastic}" /></td>
+              <td><input type="radio"  name="enthusiastic" value="Neutral" th:field="*{enthusiastic}" /></td>
+              <td><input type="radio"  name="enthusiastic" value="Agree" th:field="*{enthusiastic}" /></td>
+              <td><input type="radio"  name="enthusiastic" value="Strongly Agree" th:field="*{enthusiastic}" /></td>
+            </tr>
+          </table>
+
+        <h5>Feedback and assessment</h5>
+        <p class="comments">Comments</p>
+        <textarea rows="5" th:field="*{comments_instructor}"></textarea>
+
+
+        <h5>Overall experience</h5>
+        <div>
+
+          <table>
+            <tr>
+              <th class="first-col"></th>
+              <th>Poor</th>
+              <th>Fair</th>
+              <th>Good</th>
+              <th>Very good</th>
+              <th>Excellent</th>
+            </tr>
+            <tr>
+              <td class="first-col">24. Overall, how do you rate your experience in this course?</td>
+              <td><input type="radio"  name="rate" value="Poor"  th:field="*{rate}" /></td>
+              <td><input type="radio"  name="rate" value="Fair" th:field="*{rate}" /></td>
+              <td><input type="radio"  name="rate" value="Good" th:field="*{rate}" /></td>
+              <td><input type="radio"  name="rate" value="Very good" th:field="*{rate}" /></td>
+              <td><input type="radio"  name="rate" value="Excellent" th:field="*{rate}" /></td>
+
+            </tr>
+          </table>
+        </div>
+
+        <h5>Comments on strengths and ways of improvement</h5>
+        <p class="comments">What changes would you recommend to improve this course?</p>
+        <textarea rows="5"th:field="*{comments_improve}"></textarea>
+
+        <p class="comments">Any further, constructive comment</p>
+        <textarea rows="5" th:field="*{comments_final}"></textarea>
+        <div class="btn-block">
+          <button type="submit" >Send</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

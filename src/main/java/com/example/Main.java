@@ -59,6 +59,9 @@ public class Main
   @Autowired
   private RatingRepository ratingRepository;
 
+  @Autowired
+  private CourseFeedbackRepository feedbackRepository;
+
   public static void main(String[] args) throws Exception 
   {
     SpringApplication.run(Main.class, args);
@@ -120,6 +123,20 @@ public class Main
   {
     ratingRepository.save(rating);
     return "rating_result";
+  }
+
+  @GetMapping("/coursefeedback")
+  public String feedbackForm(Model model) 
+  {
+    model.addAttribute("feedback", new CourseFeedback());
+    return "course_feedback";
+  }
+
+  @PostMapping("/coursefeedback")
+  public String feedbackSubmit(@ModelAttribute CourseFeedback feedback) 
+  {
+    feedbackRepository.save(feedback);
+    return "thankyou";
   }
 
   /*
