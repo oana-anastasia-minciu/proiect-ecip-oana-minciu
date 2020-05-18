@@ -163,6 +163,13 @@ public class Main
       return "test";
   }
 
+  @GetMapping("/feedbackresults")
+  public String feedbackResults(Model model) 
+  {
+      model.addAttribute("messages", feedbackRepository.findAll());
+      return "feedback_results";
+  }
+
 
 
 /*

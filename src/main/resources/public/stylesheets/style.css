@@ -1,8 +1,9 @@
 .style-test{  display: flex;
     justify-content: flex-end;
-    background-color: rgb(176, 152, 219);
+    background-color: rgba(127, 80, 212, 0.58);
     padding: 1%;
     align-items: center;
+    border-radius: 5px;
 }
 
 .user-name-style{    font-size: 1.2rem;
@@ -23,9 +24,17 @@
 }
 td
 {
-  padding: 2%;
+  padding: 1%;
   align-items: center;
   border: 1px solid #dee2e6;
+  background-color: rgb(247, 247, 247);
+}
+label
+{
+    align-content: flex-start;
+    font-weight: bold;
+    padding: 15px;
+    color: rgb(39, 37, 37);
 }
 
 .table-bordered {

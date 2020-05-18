@@ -28,11 +28,6 @@ public class RatingController
     return (List<Rating>)repository.findAll();
   }
 
-  @RequestMapping(value = "/test", method = RequestMethod.GET)
-    public String messages(Model model) 
-    {
-        model.addAttribute("messages", repository.findAll());
-        return "test";
-    }
+
 
 }

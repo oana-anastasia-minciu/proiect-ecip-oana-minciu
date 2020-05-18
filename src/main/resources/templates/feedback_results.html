@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JSON Test</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+</head>
+<body>
+    <div class="style-test"> 
+    <label>ECIP - Minciu Oana-Anastasia</label>
+    <span class="user-name-style">[[${#httpServletRequest.remoteUser}]]</span>    
+    <button class="logout-button" th:action="@{/logout}" >Logout</button>
+    </div>
+    <div>
+        <p>These are the feedback results until now:</p>
+    </div>
+    <div class="view">
+    <table class="table table-bordered">
+        <tr>
+            <td >Interested</td>
+            <td >Management</a></td>
+            <td >Organized</td>
+            <td >Rating</td>
+            <td >Instructor</a></td>
+            <td >Improvement</td>
+            <td >Final</td>
+        </tr>
+        <tr th:each="message : ${messages}">
+            <td th:text="${message.interest}"></td>
+            <td th:text="${message.managed}"></td>
+            <td th:text="${message.organized}"></td>
+            <td th:text="${message.rate}"></td>
+            <td th:text="${message.comments_instructor}"></td>
+            <td th:text="${message.comments_improve}"></td>
+            <td th:text="${message.comments_final}"></td>
+        </tr>
+    </table>
+    </div>
+
+</body>
+</html>
