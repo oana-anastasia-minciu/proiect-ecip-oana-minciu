@@ -32,7 +32,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter
 			+ " from users where username=?")
 		.authoritiesByUsernameQuery("select username, authority "
 			+ "from authorities where username=?")
-		.passwordEncoder(NoOpPasswordEncoder.getInstance();
+		.passwordEncoder(NoOpPasswordEncoder.getInstance());
 	}
 
 	@Override
