@@ -73,7 +73,7 @@ public class Main
   @RequestMapping("/")      // map the home of the website
   String index() 
   {
-    return "index";
+    return "home";
   }
 
   @GetMapping("/login")      // map the home of the website
