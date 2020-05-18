@@ -11,8 +11,10 @@
 <body>
     <div class="style-test"> 
     <label>ECIP - Minciu Oana-Anastasia</label>
-    <span class="user-name-style">[[${#httpServletRequest.remoteUser}]]</span>    
-    <button class="logout-button" th:action="@{/logout}" >Logout</button>
+    <span class="user-name-style">[[${#httpServletRequest.remoteUser}]]</span>
+    <form th:action="@{/logout}" method="post">
+        <button class="logout-button" >Logout</button>
+    </form>
     </div>
     <div>
         <p>These are the feedback results until now:</p>
