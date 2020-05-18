@@ -157,7 +157,7 @@ public class Main
   }
 
   @GetMapping("/all")
-  public List<Rating> getAllUsers()
+  public @ResponseBody List<Rating> getAllUsers()
   {
     // This returns a JSON or XML with the users
     return (List<Rating>)ratingRepository.findAll();
