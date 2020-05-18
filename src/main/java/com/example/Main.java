@@ -98,6 +98,21 @@ public class Main
   {
     return "result";
   }
+
+  @GetMapping("/rating")
+  public String ratingForm(Model model) 
+  {
+    model.addAttribute("rating", new Rating());
+    return "rating";
+  }
+
+  @PostMapping("/rating")
+  public String ratingSubmit(@ModelAttribute Rating rating) 
+  {
+    return "rating_result";
+  }
+
+
 /*
   @RequestMapping("/db")
   String db(Map<String, Object> model) 
