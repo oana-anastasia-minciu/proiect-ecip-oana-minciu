@@ -69,6 +69,12 @@ label
 .bg-dark {
     background-color: #343a40!important;
 }
+.hidden-font
+{
+    background-color: #343a40!important;
+    color:  #343a40!important;
+
+}
 .navbar-brand {
     display: inline-block;
     padding-top: .3125rem;
@@ -106,7 +112,7 @@ label
     -ms-flex-pack: justify;
     justify-content: space-between;
     padding: .5rem 1rem;
-    border-radius: 15px;
+    border-radius: 5px;
 }
 .builder .top-btns .button.btn-hire-inner {
     background: #E91E63;
@@ -115,10 +121,10 @@ label
 .builder .top-btns .button {
     background: #5d0d8f;
     border: 0;
-    border-radius: 30px;
+    border-radius: 5px;
     color: white;
     font-family: 'Alegreya Sans', sans-serif;
-    font-size: 16px;
+    font-size: 12px;
     line-height: 1.25;
     margin-left: 5px;
     padding: 5px 10px 4px;
@@ -126,12 +132,12 @@ label
 
 .button {
     background: #5d0d8f;
-    border-radius: 30px;
+    border-radius: 5px;
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.2);
     color: #fff;
     cursor: pointer;
     display: inline-block;
-    font-size: 20px;
+    font-size: 12px;
 }
 /*
 .table-style {
