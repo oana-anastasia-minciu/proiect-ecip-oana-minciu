@@ -160,6 +160,7 @@ public class Main
   public @ResponseBody List<Rating> getAllUsers()
   {
     // This returns a JSON or XML with the users
+    System.out.println(((List<Rating>)ratingRepository.findAll()).size());
     return (List<Rating>)ratingRepository.findAll();
   }
 
