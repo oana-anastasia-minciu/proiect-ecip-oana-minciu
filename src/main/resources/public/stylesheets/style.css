@@ -78,7 +78,7 @@ label
 }
 
 .navbar-layoutit {
-    background: #1d032d;
+    background: #1d032dcb;
     border: 0;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.2);
     font-family: 'Alegreya Sans', sans-serif;
@@ -104,6 +104,31 @@ label
     -ms-flex-pack: justify;
     justify-content: space-between;
     padding: .5rem 1rem;
+}
+.builder .top-btns .button.btn-hire-inner {
+    background: #E91E63;
+}
+
+.builder .top-btns .button {
+    background: #6b16a1;
+    border: 0;
+    border-radius: 50px;
+    color: white;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.25;
+    margin-left: 5px;
+    padding: 5px 10px 4px;
+}
+
+.button {
+    background: #6b16a1;
+    border-radius: 50px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 20px;
 }
 /*
 .table-style {
