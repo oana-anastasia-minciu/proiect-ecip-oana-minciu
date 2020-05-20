@@ -1,5 +1,5 @@
 .style-test{  display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     background-color: #343a40!important;
     padding: 1%;
     align-items: center;
@@ -13,6 +13,10 @@
     padding: 1%;
     color: #fff;
     display: flex;
+    padding-right: 5%;
+    white-space: nowrap;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .brand{
@@ -21,11 +25,10 @@
     padding: 1%;
     color: #fff;
     display: flex;
-    align-self: flex-start;
-    align-content: flex-start;
-    justify-self: flex-start;
-    display: block;
-    padding-right: 75%;
+    justify-content: flex-start;
+    padding-right: 50%;
+    white-space: nowrap;
+    align-items: center;
 }
 
 .logout-button {   

@@ -15,7 +15,7 @@
 
         <span class="user-name-style">[[${#httpServletRequest.remoteUser}]]</span>
 
-        <form th:action="@{/logout}" method="post">
+        <form th:action="@{/logout}" method="post"  class="user-name-style">
             <input type="submit" value="Log Out"  class="button"/>
         </form>
     </div>
@@ -26,7 +26,7 @@
     <div>
         <p>These are the feedback results until now:</p>
     </div>
-    
+
     <div class="view">
     <table class="table table-bordered">
         <tr>

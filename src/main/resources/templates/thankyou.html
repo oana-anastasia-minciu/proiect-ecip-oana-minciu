@@ -22,7 +22,16 @@
     </script>
 </head>
 <body>
+    <div class="style-test">
+        <a class="brand" href="/"> ECIP - Minciu Oana-Anastasia </a>
 
+        <span class="user-name-style">[[${#httpServletRequest.remoteUser}]]</span>
+
+        <form th:action="@{/logout}" method="post"  class="user-name-style">
+            <input type="submit" value="Log Out"  class="button"/>
+        </form>
+    </div>
+    
     <script type="text/javascript">(function() {
             var head = document.getElementsByTagName('head').item(0),
                 url = 'https://app.dragdropr.com/components/dependency-manager.js?version=1.0.8';
